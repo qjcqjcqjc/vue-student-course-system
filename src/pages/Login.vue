@@ -52,13 +52,14 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          console.log(this.ruleForm.username)
           const _that = this
           this.$axios
             .post('login', {'username': this.ruleForm.username, 'password': this.ruleForm.password})
             .then(res => {
             /* 模拟服务器响应 */
               if (res.data.status === 200) {
+                console.log(res.data.data)
+                localStorage.setItem('menus', JSON.stringify(res.data.data))
                 _that.$router.push('/index')
               }
             })

@@ -7,5 +7,5 @@ Mock.mock('login', 'post', (req) => {
 
 Mock.mock('index', 'get', () => {
   console.log(User.menus)
-  return User.menus
+  return User.result
 })

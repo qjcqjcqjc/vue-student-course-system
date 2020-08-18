@@ -1,16 +1,16 @@
 <template>
   <div>
-    <el-menu :default-active="$route.path" class="el-menu-demo" @select="handleSelect" router>
-      <label v-for="menu in menus" :key="menu.id">
-        <el-menu-item v-if="menu.childMenus==''" :index="menu.id">{{menu.name}}</el-menu-item>
-        <el-submenu v-else :index="menu.id">
-          <template slot="title">{{menu.name}}</template>
-          <label v-for="menu in menu.childMenus" :key="menu.id">
-            <el-menu-item v-if="menu.childMenus==''" :index="menu.id">{{menu.name}}</el-menu-item>
-            <el-submenu v-else :index="menu.id">
-              <template slot="title">{{menu.name}}</template>
-              <label v-for="menu in menu.childMenus" :key="menu.id">
-                <el-menu-item :index="menu.id">{{menu.name}}</el-menu-item>
+    <el-menu :default-active="$route.path" class="el-menu-demo" router>
+      <label v-for="menu in menus" :key="menu.menuId">
+        <el-menu-item v-if="menu.childMenus==''" :index="menu.menuId">{{menu.menuName}}</el-menu-item>
+        <el-submenu v-else :index="menu.menuId">
+          <template slot="title">{{menu.menuName}}</template>
+          <label v-for="menu in menu.childMenus" :key="menu.menuId">
+            <el-menu-item v-if="menu.childMenus==''" :index="menu.menuId">{{menu.menuName}}</el-menu-item>
+            <el-submenu v-else :index="menu.menuId">
+              <template slot="title">{{menu.menuName}}</template>
+              <label v-for="menu in menu.childMenus" :key="menu.menuId">
+                <el-menu-item :index="menu.menuId">{{menu.menuName}}</el-menu-item>
               </label>
             </el-submenu>
           </label>
@@ -26,11 +26,8 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
-      menus: []
+      menus: JSON.parse(localStorage.getItem('menus'))
     }
-  },
-  created () {
-    this.$axios.get('index').then((response) => (this.menus = response.data))
   },
   methods: {
     menu () {
