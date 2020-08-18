@@ -1,23 +1,6 @@
 <template>
   <div>
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-    >
-      <el-menu-item index="1">首页</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">活动</template>
-        <el-menu-item index="2-1">创建</el-menu-item>
-        <el-menu-item index="2-2">管理</el-menu-item>
-      </el-submenu>
-      <el-submenu index="3">
-        <template slot="title">账户</template>
-        <el-menu-item index="2-1">账户充值</el-menu-item>
-        <el-menu-item index="2-2">账户信息</el-menu-item>
-      </el-submenu>
-    </el-menu>
+    <a>桂林电子科技大学选课系统</a>
   </div>
 </template>
 <script>
@@ -36,4 +19,9 @@ export default {
 }
 </script>
 <style scoped>
+a{
+    font-size: 50px;
+    margin-left: 400px;
+}
+
 </style>

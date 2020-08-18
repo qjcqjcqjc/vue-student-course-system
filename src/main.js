@@ -5,7 +5,6 @@ import ElementUI, { Loading } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
-import load from './Loading'
 import axios from 'axios'
 
 Vue.prototype.$axios = axios
@@ -15,7 +14,6 @@ if (process.env.MOCK) {
   require('./mock/index.js')
 }
 
-Vue.use(load)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 

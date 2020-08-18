@@ -2,7 +2,7 @@
   <div id="app">
     <el-row>
       <el-col :span="4">
-        <img class="logo" src="../assets/logo.png" alt="">
+        <a class="login">第九组作品</a>
       </el-col>
       <el-col :span="20">
         <div class="grid-content bg-purple">
@@ -36,8 +36,11 @@ export default {
 </script>
 
 <style>
-  .logo{
-    width:60px;
-    margin-left:80px;
+  .login{
+    font-size: 50px;
+    color: hotpink;
+    font-family: 楷体;
+    margin-left: 30px;
   }
+
 </style>
