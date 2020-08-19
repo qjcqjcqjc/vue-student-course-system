@@ -9,3 +9,8 @@ Mock.mock('index', 'get', () => {
   console.log(User.menus)
   return User.result
 })
+
+Mock.mock('ChooseCourse', 'get', () => {
+  console.log(User.course)
+  return User.course
+})

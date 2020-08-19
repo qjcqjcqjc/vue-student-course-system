@@ -11,133 +11,105 @@ let result = {
       'childMenus': []
     },
     {
-      'menuId': 'M006',
+      'menuId': 'M002',
       'pId': null,
-      'menuName': '修改主页内容',
-      'url': 'ModifyHomePage',
+      'menuName': '选课',
+      'url': 'ChooseCourse',
       'parentMenu': null,
       'childMenus': []
     },
     {
-      'menuId': 'M012',
+      'menuId': 'M003',
       'pId': null,
-      'menuName': '用户管理',
-      'url': 'UserManagement',
-      'parentMenu': null,
-      'childMenus': [
-        {
-          'menuId': 'M013',
-          'pId': 'M012',
-          'menuName': '添加用户',
-          'url': 'AddUser',
-          'parentMenu': null,
-          'childMenus': []
-        },
-        {
-          'menuId': 'M014',
-          'pId': 'M012',
-          'menuName': '查看用户',
-          'url': 'ViewUser',
-          'parentMenu': null,
-          'childMenus': []
-        },
-        {
-          'menuId': 'M018',
-          'pId': 'M012',
-          'menuName': '查找用户',
-          'url': 'FindFser',
-          'parentMenu': null,
-          'childMenus': []
-        }
-      ]
-    },
-    {
-      'menuId': 'M013',
-      'pId': 'M012',
-      'menuName': '添加用户',
-      'url': 'AddUser',
+      'menuName': '个人信息',
+      'url': 'PersonalInformation',
       'parentMenu': null,
       'childMenus': []
     },
     {
-      'menuId': 'M014',
-      'pId': 'M012',
-      'menuName': '查看用户',
-      'url': 'ViewUser',
-      'parentMenu': null,
-      'childMenus': []
-    },
-    {
-      'menuId': 'M015',
+      'menuId': 'M004',
       'pId': null,
-      'menuName': '课程管理',
-      'url': 'CourseManagement',
-      'parentMenu': null,
-      'childMenus': [
-        {
-          'menuId': 'M016',
-          'pId': 'M015',
-          'menuName': '添加课程',
-          'url': 'AddCourse',
-          'parentMenu': null,
-          'childMenus': []
-        },
-        {
-          'menuId': 'M017',
-          'pId': 'M015',
-          'menuName': '查看课程',
-          'url': 'ViewCourse',
-          'parentMenu': null,
-          'childMenus': []
-        },
-        {
-          'menuId': 'M019',
-          'pId': 'M015',
-          'menuName': '查找课程',
-          'url': 'FindCourse',
-          'parentMenu': null,
-          'childMenus': []
-        }
-      ]
-    },
-    {
-      'menuId': 'M016',
-      'pId': 'M015',
-      'menuName': '添加课程',
-      'url': 'AddCourse',
+      'menuName': '修改密码',
+      'url': 'ChangePassword',
       'parentMenu': null,
       'childMenus': []
     },
     {
-      'menuId': 'M017',
-      'pId': 'M015',
-      'menuName': '查看课程',
-      'url': 'ViewCourse',
-      'parentMenu': null,
-      'childMenus': []
-    },
-    {
-      'menuId': 'M018',
-      'pId': 'M012',
-      'menuName': '查找用户',
-      'url': 'FindFser',
-      'parentMenu': null,
-      'childMenus': []
-    },
-    {
-      'menuId': 'M019',
-      'pId': 'M015',
-      'menuName': '查找课程',
-      'url': 'FindCourse',
+      'menuId': 'M008',
+      'pId': null,
+      'menuName': '查看已选',
+      'url': 'ViewSelected',
       'parentMenu': null,
       'childMenus': []
     }
   ]
 }
 
+let course = { 
+  status: 200,
+  msg: '获取到课程',
+  data: [
+    {
+      'courseId': '200101',
+      'courseName': '数学分析',
+      'major': {
+        'majorId': '200'
+      },
+      'teacher': {
+        'teacherId': '007001',
+        'teacherName': '张三'
+      }
+    },
+    {
+      'courseId': '200102',
+      'courseName': '高等代数',
+      'major': {
+        'majorId': '200'
+      },
+      'teacher': {
+        'teacherId': '000001',
+        'teacherName': '海峰'
+      }
+    },
+    {
+      'courseId': '001',
+      'courseName': '计算机',
+      'major': {
+        'majorId': '200'
+      },
+      'teacher': {
+        'teacherId': '007001',
+        'teacherName': '张三'
+      }
+    },
+    {
+      'courseId': '002',
+      'courseName': '计量学',
+      'major': {
+        'majorId': '200'
+      },
+      'teacher': {
+        'teacherId': '007001',
+        'teacherName': '张三'
+      }
+    },
+    {
+      'courseId': '003',
+      'courseName': 'Python',
+      'major': {
+        'majorId': '200'
+      },
+      'teacher': {
+        'teacherId': '000001',
+        'teacherName': '海峰'
+      }
+    }
+  ]
+}
 
 let user = {
-  result
+  result,
+  course
 }
 export default user
 

@@ -2,10 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import MainContent from '@/components/MainContent.vue'
 import Home from '@/components/Home'
-import Create from '@/pages/Event/Create'
-import List from '@/pages/Event/List'
 import Login from '@/pages/Login'
 import Index from '@/components/Index'
+import ChooseCourse from '@/pages/Student/ChooseCourse'
 
 Vue.use(Router)
 
@@ -23,10 +22,10 @@ export default new Router({
       component: Index,
       children: [
         {
-          path: '/main',
+          path: '/HomePage',
           /* meta的name主要用来做面包屑 */
           meta: {
-            name: '首页'
+            name: '主页'
           },
           component: MainContent,
           children: [
@@ -37,25 +36,15 @@ export default new Router({
           ]
         },
         {
-          path: '/event',
+          path: '/ChooseCourse',
           meta: {
-            name: '活动'
+            name: '选课'
           },
           component: MainContent,
           children: [
             {
-              path: 'create',
-              meta: {
-                name: '创建'
-              },
-              component: Create
-            },
-            {
-              path: 'list',
-              meta: {
-                name: '管理'
-              },
-              component: List
+              path: '',
+              component: ChooseCourse
             }
           ]
         }
