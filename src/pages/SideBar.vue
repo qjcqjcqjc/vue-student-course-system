@@ -1,8 +1,7 @@
 <template>
   <div>
     <el-menu :router="true"
-      active-text-color="#409EFF" unique-opened :collapse="isCollapse" :collapse-transition="false"
-      :default-active="activePath">
+      active-text-color="#409EFF" unique-opened>
       <!-- 一级菜单 -->
       <label v-for="menu in menus" :key="menu.menuId">
         <!-- 判断是否有子菜单 -->

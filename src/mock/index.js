@@ -10,7 +10,17 @@ Mock.mock('index', 'get', () => {
   return User.result
 })
 
-Mock.mock('ChooseCourse', 'get', () => {
+Mock.mock('ChooseCourse?majorid=200', 'get', () => {
   console.log(User.course)
+  return User.course
+})
+
+Mock.mock('ChooseMajor', 'get', () => {
+  console.log(User.major)
+  return User.major
+})
+
+Mock.mock('CourseSelection?courseid=200101', 'get', () => {
+  console.log('164196416')
   return User.course
 })

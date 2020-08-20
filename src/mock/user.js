@@ -107,9 +107,16 @@ let course = {
   ]
 }
 
+let major = {
+  status: 200,
+  msg: '获取到专业',
+  data: [{'majorId': '200'}, {'majorId': '100'}]
+}
+
 let user = {
   result,
-  course
+  course,
+  major
 }
 export default user
 

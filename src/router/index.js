@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Login from '@/pages/Login'
 import Index from '@/components/Index'
 import ChooseCourse from '@/pages/Student/ChooseCourse'
+import ChooseMajor from '@/pages/Student/ChooseMajor'
 
 Vue.use(Router)
 
@@ -38,13 +39,26 @@ export default new Router({
         {
           path: '/ChooseCourse',
           meta: {
-            name: '选课'
+            name: '选择专业'
           },
           component: MainContent,
           children: [
             {
               path: '',
               component: ChooseCourse
+            }
+          ]
+        },
+        {
+          path: '/ChooseMajor',
+          meta: {
+            name: '选择课程'
+          },
+          component: MainContent,
+          children: [
+            {
+              path: '',
+              component: ChooseMajor
             }
           ]
         }
