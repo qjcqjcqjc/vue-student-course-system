@@ -21,6 +21,6 @@ Mock.mock('ChooseMajor', 'get', () => {
 })
 
 Mock.mock('CourseSelection?courseid=200101', 'get', () => {
-  console.log('164196416')
-  return User.course
+  console.log('收到选择课程')
+  return User.course1
 })

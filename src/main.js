@@ -6,7 +6,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import './axios'
+import {setCookie, getCookie, delCookie} from '@/cookie'
 
+Vue.prototype.$cookieStore = {setCookie, getCookie, delCookie}
 Vue.prototype.$axios = axios
 
 /* 测试环境mock才有效 */

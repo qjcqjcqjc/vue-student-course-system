@@ -1,19 +1,21 @@
 <template>
-  <div>
-    技术栈：
-    vue<br>
-    vue-router<br>
-    基于路由的配置的导航<br>
-    基于路由配置的面包屑
+  <div class="item">
+    <a>{{msg}}</a>
   </div>
 </template>
 
 <script>
 export default {
-
+  data () {
+    return {
+      msg: ''
+    }
+  }
 }
 </script>
 
 <style scoped>
-
+    .item {
+      word-break: break-all;
+    }
 </style>
